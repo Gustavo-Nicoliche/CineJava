@@ -48,6 +48,9 @@ public class Main {
             int pessoas = scanner.nextInt();
             scanner.nextLine(); // Limpa o buffer
             ingresso = new IngressoFamilia(valorBase, nomeFilme, dublado, pessoas);
+            if (pessoas <= 3) {
+                System.out.println("Atenção: o desconto de 5% só é aplicado para mais de 3 pessoas.");
+            }
         } else {
             System.out.println("Tipo de ingresso inválido!");
             scanner.close();
